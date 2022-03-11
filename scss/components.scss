@@ -1,0 +1,46 @@
+
+$white: hsla(0, 0%, 100%, 1);
+$light-green: hsla(144, 100%, 33%, 1);
+$dark-green: hsla(144, 100%, 33%, 0.32);
+$light-ash: hsla(0, 0%, 100%, 0.4);
+$dark-ash: hsla(0, 32%, 46%, 0.16);
+$screen1: 907px;
+
+//buttons
+.btn {
+    padding: 18px 33px;
+    background-color: $light-green;
+    color: $white;
+    display: inline-block;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn:hover, .btn2:hover {
+    background-color: $dark-green;
+}
+.btn2 {
+    background-color: transparent;
+    border: 1px solid $light-green;
+    color: $light-green;
+    padding: 18px 33px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+//social-media icons
+
+.socials-container {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.socials {
+    color: $white;
+}
+
