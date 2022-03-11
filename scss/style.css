@@ -297,7 +297,7 @@ header .header-body .search-container .btn {
 
 header::after {
   content: "";
-  background-image: url(/images/header-img.jpeg);
+  background-image: url(/./images/header-img.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
