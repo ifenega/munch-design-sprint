@@ -37,6 +37,7 @@ header {
     
     position: relative;
     height: 500px;
+    padding-top: 140px;
 
     .background-opacity {
         position: absolute;
@@ -52,7 +53,7 @@ header {
 
     nav {
         width: 100%;
-        position: sticky;
+        position: fixed;
         top: 0;
         left: 0;
         padding-left: -1px;
@@ -61,6 +62,7 @@ header {
         justify-content: space-between;
         align-items: center;
         background-color: hsla(0, 0%, 0%, 0.64);
+        z-index: 1000;
 
         .logo {
             color: $white;
@@ -90,6 +92,11 @@ header {
                 li {
                     display: inline-block;
                     padding-right: 52px;
+                    // transition: 0s color;
+                    &:hover {
+                        color: hsla(0, 0%, 100%, 0.87);
+                        // transition-delay: 0.025s;
+                    }
                 }
                 li:last-child {
                     padding-right: 0;
@@ -107,7 +114,6 @@ header {
     .header-body {
         display: flex;
         flex-direction: column;
-        margin-top: 88px;
         padding: 0 16px;
         color: hsla(0, 0%, 100%, 0.87);
         text-align: center;
@@ -157,6 +163,7 @@ header {
 
     @include desktop(907px) {
         height: 758px;
+        padding-top: 188px;
     }
     &::after {
         content: "";
@@ -466,6 +473,9 @@ header {
         h3 {
             color: hsla(255, 2%, 48%, 1);
             line-height: 19px;
+            @include desktop(907px) {
+                line-height: 41.6px;
+            }
         }
     }
 
@@ -477,6 +487,7 @@ header {
         margin-bottom: 32px;
         scrollbar-width: none;
         padding: 0 16px;
+        justify-content: center;
 
         &::-webkit-scrollbar {
             display: none;
@@ -549,6 +560,183 @@ header {
         gap: 10px;
         align-items: center;
         justify-content: center;
+        margin-bottom: 64px;
+
+        @include desktop(907px) {
+            margin-bottom: 96px;
+        }
     }
+}
+
+//footer section 
+
+footer {
+    padding: 24px 16px;
+    background-color: black;
+    color: hsla(0, 0%, 100%, 0.64);
+
+    .logo2 {
+        h4 {
+            color: $light-green;
+            font-size: 21px;
+            font-weight: 700;
+        }
+        
+    }
+    .download-container {
+        display: flex;
+        gap: 24px;
+        padding: 16px 0 28px;
+
+        @include desktop(907px) {
+            padding: 24px 0 56px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            max-width: 160px;
+            text-align: start;
+            //the button is affecting the responsi
+            @include desktop(335px) {
+                padding: 12px 22px;
+            }
+
+            h6 {
+                font-size: 11px;
+                font-weight: 400;
+            }
+            aside {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    
+    
+    .flex-container {
+        display: flex;
+        gap: 52px;
+        flex-direction: column;
+
+        @include desktop(1032px) {
+            flex-direction: row;
+            gap: 144px;
+        }
+
+        
+        .flex-container1 {
+            
+
+            select {
+                appearance: none;
+                outline: 0;
+                background: transparent;
+                background-image: none;
+                width: 100%;
+                height: 100%;
+                color: hsla(0, 0%, 77%, 1);
+                cursor: pointer;
+                border: 1px solid hsla(0, 0%, 77%, 1);
+                border-radius: 8px;
+                padding: 16px;
+                margin-top: 12px;
+
+                @include desktop(768px) {
+                    width: 328px;
+                    padding: 20px 16px;
+                }
+            }
+            select:hover {
+                background: hsla(0, 0%, 100%, 0.16);
+            }
+            .select-container {
+                position: relative;
+                display: block;
+                height: 100%;
+                line-height: 3;
+                overflow: hidden;
+                border-radius: .25em;
+                padding-bottom: 10px;
+                margin-bottom: 68px;
+            }
+        }
+
+        .flex-container2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+
+            @include desktop(907px) {
+                gap: 200px;
+            }
+
+            .footer-sections {
+                width: 124px;
+                p {
+                    color: hsla(0, 0%, 100%, 0.87);
+                    margin-bottom: 12px;
+                }
+                ul {
+                    list-style: none; 
+                    li {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    // from the horizontal line downward
+
+    hr {
+        margin: 36px 0;
+        @include desktop(907px) {
+            margin: 56px 0;
+        }
+    }
+
+    .social-media-container {
+        &-inner {
+            display: flex;
+            gap: 24px;
+            margin: 12px 0 24px;
+            @include desktop(907px) {
+                margin: 12px 0 40px;
+            }
+        }
+
+    }
+
+    .copyright-text {
+        line-height: 24px;
+        br {
+            display: unset;
+            @include desktop(907px) {
+                display: none;
+            }
+        }
+    }
+
+
+
+    @include desktop(907px) {
+        padding: 24px 64px;
+
+        .logo2 {
+            h4 {
+                font-size: 21px;
+            }
+        }
+
+        //from the horizontal line downward
+
+    }
+
 }
 

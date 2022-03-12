@@ -1,7 +1,13 @@
 
 @mixin desktop($desktop) {
     @media (min-width: #{$desktop}) {
-        @content
+        @content;
+    }
+}
+
+@mixin desktop2($desktop) {
+    @media (max-width: #{$desktop}) {
+        @content;
     }
 }
 

@@ -156,6 +156,7 @@ body {
 header {
   position: relative;
   height: 500px;
+  padding-top: 140px;
 }
 
 header .background-opacity {
@@ -172,8 +173,7 @@ header .background-opacity {
 
 header nav {
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   padding-left: -1px;
@@ -188,6 +188,7 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.64);
+  z-index: 1000;
 }
 
 header nav .logo {
@@ -218,6 +219,9 @@ header nav ul, header nav .sign-buttons {
     display: inline-block;
     padding-right: 52px;
   }
+  header nav ul li:hover {
+    color: rgba(255, 255, 255, 0.87);
+  }
   header nav ul li:last-child {
     padding-right: 0;
   }
@@ -234,7 +238,6 @@ header .header-body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 88px;
   padding: 0 16px;
   color: rgba(255, 255, 255, 0.87);
   text-align: center;
@@ -292,6 +295,7 @@ header .header-body .search-container .btn {
 @media (min-width: 907px) {
   header {
     height: 758px;
+    padding-top: 188px;
   }
 }
 
@@ -656,6 +660,12 @@ header::after {
   line-height: 19px;
 }
 
+@media (min-width: 907px) {
+  .munch .general-header-text h3 {
+    line-height: 41.6px;
+  }
+}
+
 .munch .munch-slider {
   overflow-x: scroll;
   display: -webkit-box;
@@ -666,6 +676,9 @@ header::after {
   margin-bottom: 32px;
   scrollbar-width: none;
   padding: 0 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .munch .munch-slider::-webkit-scrollbar {
@@ -772,5 +785,209 @@ header::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 907px) {
+  .munch .btn3 {
+    margin-bottom: 96px;
+  }
+}
+
+footer {
+  padding: 24px 16px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+footer .logo2 h4 {
+  color: #00a843;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+footer .download-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  padding: 16px 0 28px;
+}
+
+@media (min-width: 907px) {
+  footer .download-container {
+    padding: 24px 0 56px;
+  }
+}
+
+footer .download-container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  max-width: 160px;
+  text-align: start;
+}
+
+@media (min-width: 335px) {
+  footer .download-container button {
+    padding: 12px 22px;
+  }
+}
+
+footer .download-container button h6 {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+footer .download-container button aside {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+footer .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 52px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1032px) {
+  footer .flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 144px;
+  }
+}
+
+footer .flex-container .flex-container1 select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background: transparent;
+  background-image: none;
+  width: 100%;
+  height: 100%;
+  color: #c4c4c4;
+  cursor: pointer;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  footer .flex-container .flex-container1 select {
+    width: 328px;
+    padding: 20px 16px;
+  }
+}
+
+footer .flex-container .flex-container1 select:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+footer .flex-container .flex-container1 .select-container {
+  position: relative;
+  display: block;
+  height: 100%;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: .25em;
+  padding-bottom: 10px;
+  margin-bottom: 68px;
+}
+
+footer .flex-container .flex-container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 80px;
+}
+
+@media (min-width: 907px) {
+  footer .flex-container .flex-container2 {
+    gap: 200px;
+  }
+}
+
+footer .flex-container .flex-container2 .footer-sections {
+  width: 124px;
+}
+
+footer .flex-container .flex-container2 .footer-sections p {
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 12px;
+}
+
+footer .flex-container .flex-container2 .footer-sections ul {
+  list-style: none;
+}
+
+footer .flex-container .flex-container2 .footer-sections ul li {
+  margin-bottom: 12px;
+}
+
+footer hr {
+  margin: 36px 0;
+}
+
+@media (min-width: 907px) {
+  footer hr {
+    margin: 56px 0;
+  }
+}
+
+footer .social-media-container-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  margin: 12px 0 24px;
+}
+
+@media (min-width: 907px) {
+  footer .social-media-container-inner {
+    margin: 12px 0 40px;
+  }
+}
+
+footer .copyright-text {
+  line-height: 24px;
+}
+
+footer .copyright-text br {
+  display: unset;
+}
+
+@media (min-width: 907px) {
+  footer .copyright-text br {
+    display: none;
+  }
+}
+
+@media (min-width: 907px) {
+  footer {
+    padding: 24px 64px;
+  }
+  footer .logo2 h4 {
+    font-size: 21px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
