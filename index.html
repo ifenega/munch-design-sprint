@@ -8,6 +8,8 @@
     <title>Munch</title>
 </head>
 <body>
+
+
     
     <header>
         <div class="background-opacity"></div>
@@ -16,25 +18,33 @@
                 <h4>Chopp</h4>
             </div>
 
-            <div class="nav-toggle-container">
-                <div class="toggle btn">
-                    <img src="./images/toggle.svg" alt="">
+            <div class="nav-con">
+                
+                <div class="toggle btn" id="tggle">
+                    <img src="./images/toggle.svg" alt="" class="icon1 active">
+                    <img src="./images/cancel.svg" alt="" class="icon2">
                 </div>
-            </div>
-            
-            
-            <ul class="navigation">
-                <li>Home</li>
-                <li>Top Picks <img src="./images/Arrow - Down 2.svg" alt=""></li>
-                <li>Resources <img src="./images/Arrow - Down 2.svg" alt=""></li>
-                <li>About</li>
-                <li>Blog</li>
-            </ul>
+                
 
-            <div class="sign-buttons">
-                <div class="btn2">Sign In</div>
-                <div class="btn">Sign Up</div>
+                <ul class="navigation">
+                    <li>Home</li>
+                    <li>Top Picks <img src="./images/Arrow - Down 2.svg" alt=""></li>
+                    <li>Resources <img src="./images/Arrow - Down 2.svg" alt=""></li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>
+                        <div class="sign-buttons">
+                            <div class="btn2">Sign In</div>
+                            <div class="btn">Sign Up</div>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
+            
+
+            
+ 
         </nav>
 
         <div class="header-body">
@@ -223,27 +233,32 @@
     </section>
 
     <section class="testimonials">
-        <h2>Testimonials</h2>
-        <h3>Learn why 3000+ people are using munch</h3>
+        <div class="general-header-text">
+            <h2>Testimonials</h2>
+            <h3>Learn why 3000+ people are using munch</h3>
+        </div>
+        
 
         <div class="carousel-inner">
+            
 
             <div class="carousel-item">
-                <div class="opacity-div1"></div>
-                <div class="opacity-div2"></div>
+                
 
                 <div class="carousel-content">
-                    <img src="" alt="">
+                    <img src="./images/testimonial.jpeg" alt="">
                     <div class="carousel-content-inner">
                         <p>“ Reprehenderit cillum aliquip mollit pariatur cillum irure nisi veniam cupidatat ut esse dolo re enim excepteur. Amet aute aliqua dolore nulla adipisicing velit. Mollit ut velit non eu uis. Reprehenderit cillum aliquip mollit pariatur cillum irure nisi veniam cupidatat ut esse dolo re enim excepteur. Amet aute aliqua dolore nulla adipisicing velit. Mollit ut velit non eu uis. </p>
 
-                        <div class="carousel-content-inner-btn">
+                        <div class="carousel-content-inner-btn btn">
                             <h6>CEO, Easyretail</h6>
                             <p>Sheldon Cooper</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="opacity-div1"></div>
+            <div class="opacity-div2"></div>
         </div>
     </section>
 
@@ -529,7 +544,7 @@
         <hr>
 
         <div class="social-media-conatainer">
-            <p>Social Media</p>
+            <p class="social-media-container-header">Social Media</p>
             <div class="social-media-container-inner">
                 <div class="socials-container">
                     <img src="./images/twitter.svg" alt="" class="socials">

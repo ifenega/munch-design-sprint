@@ -72,6 +72,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .btn {
   padding: 18px 33px;
   background-color: #00a843;
@@ -114,10 +118,6 @@ a {
   color: white;
 }
 
-.testimonials {
-  display: none;
-}
-
 * {
   font-family: 'DM Sans', sans-serif;
   -webkit-box-sizing: border-box;
@@ -128,6 +128,7 @@ a {
 
 body {
   font-size: 16px;
+  position: relative;
 }
 
 .general-header-text {
@@ -188,42 +189,118 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.64);
-  z-index: 1000;
+  z-index: 100;
 }
 
 header nav .logo {
   color: white;
 }
 
-header nav .toggle {
-  padding: 9px 10px;
+header nav .nav-con {
+  position: relative;
 }
 
-header nav ul, header nav .sign-buttons {
+header nav .nav-con .toggle {
+  padding: 9px 10px;
+  z-index: 1010;
+  display: initial;
+  position: fixed;
+  top: 8px;
+  right: 15px;
+}
+
+header nav .nav-con .toggle .icon1.active {
+  display: initial;
+}
+
+header nav .nav-con .toggle .icon1 {
   display: none;
+}
+
+header nav .nav-con .toggle .icon2 {
+  display: none;
+}
+
+header nav .nav-con .toggle .icon2.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .nav-con .toggle:hover {
+  background-color: #00a843;
+}
+
+header nav .nav-con .navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  padding: 112px 16px 32px;
+  -webkit-transition: left 0.25s;
+  transition: left 0.25s;
+}
+
+header nav .nav-con .navigation li:last-child {
+  padding-top: 222px;
+}
+
+header nav .nav-con .navigation.active {
+  left: 0;
 }
 
 @media (min-width: 1000px) {
   header nav {
     padding: 22px 64px;
   }
-  header nav .toggle {
+  header nav .nav-con {
+    position: revert;
+  }
+  header nav .nav-con .toggle {
     display: none;
   }
+  header nav .nav-con .navigation {
+    position: revert;
+    background-color: revert;
+    display: revert;
+    padding: revert;
+  }
+  header nav .nav-con .navigation li:last-child {
+    padding-top: 0;
+  }
   header nav ul {
-    display: initial;
     list-style: none;
     color: rgba(255, 255, 255, 0.6);
   }
   header nav ul li {
     display: inline-block;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1000px) and (min-width: 1056px) {
+  header nav ul li {
     padding-right: 52px;
   }
+}
+
+@media (min-width: 1000px) {
   header nav ul li:hover {
     color: rgba(255, 255, 255, 0.87);
   }
   header nav ul li:last-child {
-    padding-right: 0;
+    padding-top: revert;
   }
   header nav .sign-buttons {
     display: initial;
@@ -637,6 +714,154 @@ header::after {
   }
 }
 
+.testimonials {
+  margin-top: 64px;
+  padding-bottom: 32px;
+  background-color: #caecd8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 907px) {
+  .testimonials {
+    margin-top: 96px;
+    padding-bottom: 64px;
+  }
+}
+
+.testimonials .carousel-inner {
+  position: relative;
+}
+
+.testimonials .carousel-inner .opacity-div1 {
+  width: 263px;
+  height: 526px;
+  position: absolute;
+  background: #FFFFFF;
+  -webkit-box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+          box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+  border-radius: 8px;
+  top: 8px;
+  left: 40px;
+  z-index: 2;
+}
+
+@media (min-width: 907px) {
+  .testimonials .carousel-inner .opacity-div1 {
+    width: 686px;
+    height: 386px;
+    top: 16px;
+    left: 48px;
+  }
+}
+
+.testimonials .carousel-inner .opacity-div2 {
+  width: 247px;
+  height: 526px;
+  position: absolute;
+  background: #FFFFFF;
+  -webkit-box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+          box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+  border-radius: 8px;
+  top: 16px;
+  left: 48px;
+  z-index: 1;
+}
+
+@media (min-width: 907px) {
+  .testimonials .carousel-inner .opacity-div2 {
+    width: 654px;
+    height: 386px;
+    top: 32px;
+    left: 62px;
+  }
+}
+
+.testimonials .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+  position: relative;
+  z-index: 3;
+}
+
+.testimonials .carousel-inner .carousel-item .carousel-content {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+          box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
+  border-radius: 8px;
+  width: 279px;
+  height: 526px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 907px) {
+  .testimonials .carousel-inner .carousel-item .carousel-content {
+    width: 718px;
+    height: 386px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner {
+    padding: 24px;
+  }
+  .testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner-btn {
+    padding-top: 34px;
+  }
+}
+
+.testimonials .carousel-inner .carousel-item .carousel-content img {
+  width: 100%;
+  height: 165px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 907px) {
+  .testimonials .carousel-inner .carousel-item .carousel-content img {
+    height: 100%;
+  }
+}
+
+.testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner {
+  padding: 16px;
+}
+
+@media (min-width: 907px) {
+  .testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner {
+    padding: 24px;
+  }
+}
+
+.testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner-btn {
+  background-color: black;
+  font-size: 12px;
+  padding: 8px 16px 12px;
+  margin-top: 16px;
+}
+
+.testimonials .carousel-inner .carousel-item .carousel-content .carousel-content-inner-btn p {
+  padding-top: 6px;
+  font-weight: 500;
+}
+
 .munch {
   padding: unset;
   display: -webkit-box;
@@ -676,9 +901,6 @@ header::after {
   margin-bottom: 32px;
   scrollbar-width: none;
   padding: 0 16px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .munch .munch-slider::-webkit-scrollbar {
@@ -952,6 +1174,12 @@ footer hr {
   footer hr {
     margin: 56px 0;
   }
+}
+
+footer .social-media-container-header {
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: 500;
+  font-size: 15px;
 }
 
 footer .social-media-container-inner {

@@ -70,4 +70,8 @@ section {
 a {
   text-decoration: none;
 }
+
+ul {
+  list-style: none;
+}
 /*# sourceMappingURL=utilities.css.map */
