@@ -582,6 +582,17 @@ header::after {
           box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
   border-radius: 8px;
   color: #79787d;
+  -webkit-transition: 0.25s -webkit-box-shadow;
+  transition: 0.25s -webkit-box-shadow;
+  transition: 0.25s box-shadow;
+  transition: 0.25s box-shadow, 0.25s -webkit-box-shadow;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.ourreach .map-container .location:hover {
+  -webkit-box-shadow: 1px 2px 16px rgba(102, 202, 142, 0.64);
+          box-shadow: 1px 2px 16px rgba(102, 202, 142, 0.64);
 }
 
 .ourreach .map-container .location p {
@@ -1140,7 +1151,7 @@ footer .flex-container .flex-container2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 80px;
+  gap: 40px;
 }
 
 @media (min-width: 907px) {
@@ -1164,6 +1175,18 @@ footer .flex-container .flex-container2 .footer-sections ul {
 
 footer .flex-container .flex-container2 .footer-sections ul li {
   margin-bottom: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 0;
+  color: rgba(255, 255, 255, 0.64);
+  -webkit-transition: border-bottom 0.15s, color 0.15s;
+  transition: border-bottom 0.15s, color 0.15s;
+}
+
+footer .flex-container .flex-container2 .footer-sections ul li:hover {
+  color: rgba(255, 255, 255, 0.87);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.87);
 }
 
 footer hr {

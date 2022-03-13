@@ -415,7 +415,12 @@ header {
             box-shadow: 1px 2px 16px rgba(186, 149, 158, 0.2);
             border-radius: 8px;
             color: hsla(252, 2%, 48%, 1);
+            transition: 0.25s box-shadow;
+            transition-timing-function: ease-in;
 
+            &:hover {
+                box-shadow: 1px 2px 16px rgba(102, 202, 142, 0.64);
+            }
             p {
                 line-height: 16px;
                 font-size: 0.625rem;
@@ -858,7 +863,7 @@ footer {
         .flex-container2 {
             display: flex;
             flex-wrap: wrap;
-            gap: 80px;
+            gap: 40px;
 
             @include desktop(907px) {
                 gap: 200px;
@@ -874,6 +879,15 @@ footer {
                     list-style: none; 
                     li {
                         margin-bottom: 12px;
+                        width: fit-content;
+                        border-bottom: 0;
+                        color: hsla(0, 0%, 100%, 0.64);
+                        transition: border-bottom 0.15s, color 0.15s;
+
+                        &:hover {
+                            color: hsla(0, 0%, 100%, 0.87);
+                            border-bottom: 1px solid hsla(0, 0%, 100%, 0.87);
+                        }
                     }
                 }
             }
