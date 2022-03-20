@@ -336,7 +336,7 @@ header .header-body .search-container {
 header .header-body .search-container input[type=text] {
   width: 100%;
   padding: 26px 16px;
-  color: #c4c4c4;
+  color: black;
   border: none;
   border-radius: 8px;
 }
@@ -912,6 +912,9 @@ header::after {
   margin-bottom: 32px;
   scrollbar-width: none;
   padding: 0 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .munch .munch-slider::-webkit-scrollbar {

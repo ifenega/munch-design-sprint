@@ -202,7 +202,7 @@ header {
            input[type=text] {
                 width: 100%;
                 padding: 26px 16px;
-                color: hsla(0, 0%, 77%, 1);
+                color: black;
                 border: none;
                 border-radius: 8px;
            }
@@ -682,6 +682,7 @@ header {
         margin-bottom: 32px;
         scrollbar-width: none;
         padding: 0 16px;
+        justify-content: center;
 
         &::-webkit-scrollbar {
             display: none;
